@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :invites
       resources :users
+      get '/auth' => 'invites#auth'
     end
   end 
 end

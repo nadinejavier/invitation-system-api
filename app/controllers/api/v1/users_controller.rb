@@ -1,4 +1,5 @@
 class Api::V1::UsersController < ApplicationController
+  before_action :authenticate_user
     def index
       users = User.all
       render json: users
@@ -22,5 +23,6 @@ class Api::V1::UsersController < ApplicationController
       @user_sent_invites = @user.invites
       render json: @user, include: [:invites]
     end
+
 end
 
