@@ -17,8 +17,8 @@ class Api::V1::InvitesController < ApplicationController
   end
 
   def show
-    invite = Invite.find(token: params[:token])
-    render json: invite, status: :ok
+    @invite = Invite.find_by(token: params[:token])
+    render json: @invite, include: :user, status: :ok
   end
 
 end
