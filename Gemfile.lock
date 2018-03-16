@@ -48,6 +48,8 @@ GEM
     ffi (1.9.23)
     figaro (1.1.1)
       thor (~> 0.14)
+    friendly_id (5.1.0)
+      activerecord (>= 4.0.0)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     i18n (0.9.5)
@@ -133,6 +135,7 @@ DEPENDENCIES
   bcrypt (~> 3.1.7)
   byebug
   figaro
+  friendly_id (~> 5.1.0)
   knock
   listen (>= 3.0.5, < 3.2)
   pg (>= 0.18, < 2.0)

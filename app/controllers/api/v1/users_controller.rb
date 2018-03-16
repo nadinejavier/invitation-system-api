@@ -19,7 +19,7 @@ class Api::V1::UsersController < ApplicationController
     end
 
     def show
-      @user = User.find_by(id: params[:id])
+      @user = User.find_by(id: params[:id].to_i(36))
       @user_sent_invites = @user.invites
       render json: @user, include: [:invites]
     end
